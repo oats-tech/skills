@@ -20,12 +20,6 @@ npx skills add oats-tech/skills
 
 It lists the three skills and asks which agents to install them for, and whether for this project or globally (global works in every project).
 
-No prompts, Claude Code only, every project:
-
-```bash
-npx skills add oats-tech/skills -s '*' -a claude-code -g -y
-```
-
 Other commands:
 
 ```bash
