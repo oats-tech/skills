@@ -15,20 +15,25 @@ The plan lives in `.plans/<key>/` in your project (kept out of git).
 Needs Node.js 22.20+ and access to this repo (your normal git or `gh` login is enough).
 
 ```bash
-# all three skills, for Claude Code, in your user folder (works in every project)
-npx skills add oats-tech/skills --all -g -a claude-code -y
+npx skills add oats-tech/skills
 ```
 
-Other options:
+It lists the three skills and asks which agents to install them for, and whether for this project or globally (global works in every project).
+
+No prompts, Claude Code only, every project:
 
 ```bash
-npx skills add oats-tech/skills --list                         # see what's here
-npx skills add oats-tech/skills --skill plan-ticket -g -a claude-code -y   # just one
-npx skills add oats-tech/skills --all -a claude-code -y        # this project only (.claude/skills/)
-npx skills update -g                                           # pull the latest versions
+npx skills add oats-tech/skills -s '*' -a claude-code -g -y
 ```
 
-Using another agent? Swap `-a claude-code` for yours (e.g. `-a codex`). `/verify-ticket` uses Claude Code's built-in `/code-review` when it's there, and falls back to a fresh review session when it isn't.
+Other commands:
+
+```bash
+npx skills add oats-tech/skills --list   # see what's here
+npx skills update -g                     # pull the latest versions
+```
+
+`/verify-ticket` uses Claude Code's built-in `/code-review` when it's there, and falls back to a fresh review session in other agents.
 
 ## The loop
 
