@@ -12,7 +12,7 @@ The plan lives in `.plans/<key>/` in your project (kept out of git).
 
 ## Install
 
-Needs Node.js 22.20+ and access to this repo (your normal git or `gh` login is enough).
+Needs Node.js 22.20+.
 
 ```bash
 npx skills add oats-tech/skills
